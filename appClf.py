@@ -39,7 +39,9 @@ def test():
     return jsonify(name)    
     
 
-@app.route("/ai", methods=['POST'])
+
+
+@app.route("/ai/api/clf", methods=['POST'])
 def extract_feature():
     
     
@@ -64,15 +66,6 @@ def extract_feature():
     return   jsonify(output_class)
 
 
-
-
-
-
-
-
-
-
- 
 
 if __name__ == '__main__':
     app.run( host= '0.0.0.0')
