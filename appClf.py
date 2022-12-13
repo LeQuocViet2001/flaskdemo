@@ -30,8 +30,16 @@ class_names = ['Boots - Ankle',
 
 app = Flask(__name__)  
     
+    
+@app.route("/ai", methods=['GET'])    
+def test():
+    name = []
+    name.append("sads")
+    name.append("dsds")
+    return jsonify(name)    
+    
 
-@app.route("/", methods=['POST'])
+@app.route("/ai", methods=['POST'])
 def extract_feature():
     
     
@@ -67,4 +75,4 @@ def extract_feature():
  
 
 if __name__ == '__main__':
-    app.run( port=5000)
+    app.run( host= '0.0.0.0')
